@@ -4,7 +4,7 @@ set -e
 
 mvn -DskipTests clean package
 
-docker build -f src/main/docker/Dockerfile.jvm -t  quay.io/rhdevelopers/fruityvice-proxy:jvm .
+docker build -f src/main/docker/Dockerfile.fast-jar -t  quay.io/rhdevelopers/fruityvice-proxy:jvm .
 
 mvn -DskipTests package -Pnative -Dquarkus.native.container-build=true
 
